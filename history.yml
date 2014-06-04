@@ -1,0 +1,94 @@
+---
+buzzwords: |+
+  data: {"items":[{"label":"Pivoting","value":10},{"label":"Turn-key","value":6},{"label":"Paradigm shift","value":8},{"label":"Leverage","value":11},{"label":"Exit strategy","value":26},{"label":"Streamlininess","value":29}],"id":"buzzwords","updatedAt":1401909356}
+
+convergence: |+
+  data: {"points":[{"x":534,"y":6},{"x":535,"y":31},{"x":536,"y":47},{"x":537,"y":18},{"x":538,"y":46},{"x":539,"y":46},{"x":540,"y":30},{"x":541,"y":10},{"x":542,"y":35},{"x":543,"y":32}],"id":"convergence","updatedAt":1401890964}
+
+valuation: |+
+  data: {"current":87,"last":20,"id":"valuation","updatedAt":1401890964}
+
+karma: |+
+  data: {"current":167781,"last":164576,"id":"karma","updatedAt":1401890964}
+
+synergy: |+
+  data: {"value":8,"id":"synergy","updatedAt":1401890964}
+
+rotationDO: |+
+  data: {"text":"\u003ctable width=100% bgcolor=#97c0d2\u003e\u003ctr\u003e\u003ctd\u003eProduction Support\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cimg width=75% height=75% src=\"/assets/dmitchell.jpg\"\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eDave\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e","title":"","moreinfo":"","id":"rotationDO","updatedAt":1401902689}
+
+top_underlying: |+
+  data: {"series":[{"name":"GLW","data":[98],"pointWidth":500},{"name":"PT","data":[89],"pointWidth":500},{"name":"AKRX","data":[73],"pointWidth":500},{"name":"GLD","data":[65],"pointWidth":500},{"name":"INTL","data":[63],"pointWidth":500}],"color":"#d35400","id":"top_underlying","updatedAt":1401909356}
+
+top_exchanges: |+
+  data: {"series":[{"data":[1,3,1,2,5,1]}],"categories":["Aug","Sep","Oct","Nov","Dec","Jan"],"color":"#efad1b","id":"top_exchanges","updatedAt":1401909356}
+
+pie_ppl: |+
+  data: {"series":[{"type":"pie","name":"Type","data":[["LOVE",130],["LIKE",246],["HATE",99],["CAKE?",954]]}],"color":"#f39c12","id":"pie_ppl","updatedAt":1401909356}
+
+account_status: |+
+  data: {"series":[{"type":"pie","name":"Type","data":[["Active",150],["Cancel?",64],["Alumni",13]]}],"color":"#f39c12","id":"account_status","updatedAt":1401909356}
+
+account_level: |+
+  data: {"series":[{"type":"pie","name":"Type","data":[["Active",29],["Passive",78],["Unmanaged",762]]}],"color":"#f39c12","id":"account_level","updatedAt":1401909356}
+
+top_instruments: |+
+  data: {"series":[{"name":"Instruments","data":[969,914,906,898,801,685,503,478,262,188]}],"categories":["BANJO","GUITAR","PIANO","BEATBOX","CLAPPING","UKULELE","VIOLA","FLUTE","ABLETON","DRUMS"],"color":"#2c3e50","id":"top_instruments","updatedAt":1401909356}
+
+recent_trades_list: |+
+  data: {"items":[{"label":"SOLD A CAR FOR","value":"$999.99"},{"label":"BOUGHT BREAD FOR","value":"$9,001.00"},{"label":"BOUGHT APPLES FOR","value":"$78.32"},{"label":"SOLD WATER FOR","value":"$59.99"}],"id":"recent_trades_list","updatedAt":1401909356}
+
+total_transactions: |+
+  data: {"current":8937,"last":412,"id":"total_transactions","updatedAt":1401909356}
+
+bookmarks_frequency: |+
+  data: {"value":[{"label":"Label One: 16","value":16},{"label":"Label Two: 34","value":34}],"id":"bookmarks_frequency","updatedAt":1401892618}
+
+bookmarks_frequency_full: |+
+  data: {"value":[{"label":"Label1","value":16},{"label":"Label2","value":34},{"label":"Label3","value":10},{"label":"Label4","value":40},{"label":"Label5","value":20}],"id":"bookmarks_frequency_full","updatedAt":1401892618}
+
+am_iframe: |+
+  data: {"url":"http://blog.homefinder.com/2013/12/11/homefinder-com-advertiser-center-your-how-to-guide","id":"am_iframe","updatedAt":1401832789}
+
+amSRsOpen: |+
+  data: {"title":"Account Managment: Open Issues","current":10,"last":10,"moreinfo":"Not Touched in 5 Days: 0","id":"amSRsOpen","updatedAt":1401893017}
+
+cases_open: |+
+  data: {"value":37,"id":"cases_open","updatedAt":1401893024}
+
+convergence_series: |+
+  data: {"series":[{"name":"Convergence","data":[{"x":1,"y":4},{"x":2,"y":27},{"x":3,"y":6}]},{"name":"Divergence","data":[{"x":1,"y":5},{"x":2,"y":2},{"x":3,"y":9}]}],"id":"convergence_series","updatedAt":1401893023}
+
+convergence_points: |+
+  data: {"points":[{"x":1,"y":4},{"x":2,"y":27},{"x":3,"y":6}],"id":"convergence_points","updatedAt":1401893023}
+
+progress_bars: |+
+  data: {"title":"Portfolio Retention: # of Accounts by AM","progress_items":[{"name":"Andrea","progress":92},{"name":"Kelly","progress":94},{"name":"Scott","progress":90}],"id":"progress_bars","updatedAt":1401893017}
+
+upsells_mtd: |+
+  data: {"title":"Upsells: This Month","current":12,"last":12,"moreinfo":"Upsells Last Month: 12","id":"upsells_mtd","updatedAt":1401892996}
+
+iframe_statusboard: |+
+  data: {"url":"http://status.homefinder.com","id":"iframe_statusboard","updatedAt":1401908731}
+
+casesDataOpsOpen: |+
+  data: {"value":29,"id":"casesDataOpsOpen","updatedAt":1401892540}
+
+casesDataOpsOpenToday: |+
+  data: {"value":1,"id":"casesDataOpsOpenToday","updatedAt":1401909356}
+
+casesDataOpsClosedToday: |+
+  data: {"current":18,"last":36,"id":"casesDataOpsClosedToday","updatedAt":1401909318}
+
+tvLRnumberCSclosed: |+
+  data: {"title":"Client Services: Issues Closed Today","current":0,"last":0,"id":"tvLRnumberCSclosed","updatedAt":1401894796}
+
+tvLRnumberCSopen: |+
+  data: {"title":"Client Services: Open Issues","current":5,"last":5,"moreinfo":"Proactive DQMs: 0 | Client Requests: 5","id":"tvLRnumberCSopen","updatedAt":1401894455}
+
+tvLRlist2: |+
+  data: {"title":"Completed Requests by Type","items":[{"label":"Advertiser","value":0},{"label":"Case Duplicated","value":0},{"label":"Consumer","value":0},{"label":"Data Issue","value":0},{"label":"External Demand","value":0},{"label":"Data Maintenance","value":0},{"label":"Feedback","value":0},{"label":"Project","value":0},{"label":"Reporting","value":0},{"label":"Spam","value":0},{"label":"Systems and Processing","value":0},{"label":"Tool","value":0}],"moreinfo":"Today","id":"tvLRlist2","updatedAt":1401894796}
+
+casesDataOpsClosedTrend: |+
+  data: {"series":[{"data":[58,57,55,36,18]}],"categories":["Saturday","Sunday","Monday","Tuesday","Wednesday"],"color":"#efad1b","id":"casesDataOpsClosedTrend","updatedAt":1401909356}
+
