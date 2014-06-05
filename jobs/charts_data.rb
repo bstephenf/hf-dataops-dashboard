@@ -3,7 +3,7 @@ require 'json'
 
 last_transaction = 0
 
-SCHEDULER.every '5s', allow_overlapping: false do
+SCHEDULER.every '120s', allow_overlapping: false do
 
   ### TOP UNDERLYING
   list2_array = []
@@ -34,14 +34,12 @@ SCHEDULER.every '5s', allow_overlapping: false do
   send_event('top_exchanges', { series: [{ data: ex_data2 }], categories: ex_keys, color: '#efad1b' })
 
   ### PPL WHO LIKE PIE
-  pie_series = [{ type: 'pie', name: 'Type', data: [["LOVE", rand(1000)], ["LIKE", rand(1000)], ["HATE", rand(1000)], ["CAKE?", rand(1000)]] }]
-  pie_account_status = [{ type: 'pie', name: 'Type', data: [["Active", rand(1000)], ["Cancel?", rand(100)], ["Alumni", rand(1000)]] }]
+  #pie_series = [{ type: 'pie', name: 'Type', data: [["LOVE", rand(1000)], ["LIKE", rand(1000)], ["HATE", rand(1000)], ["CAKE?", rand(1000)]] }]
+  #pie_account_status = [{ type: 'pie', name: 'Type', data: [["Active", rand(1000)], ["Cancel?", rand(100)], ["Alumni", rand(1000)]] }]
   pie_account_level = [{ type: 'pie', name: 'Type', data: [["Active", rand(100)], ["Passive", rand(100)], ["Unmanaged", rand(1000)]] }]
 
-  send_event('pie_ppl', { series: pie_series, color: '#f39c12' })
-
-  send_event('account_status', { series: pie_account_status, color: '#f39c12' })
-  
+  #send_event('pie_ppl', { series: pie_series, color: '#f39c12' })
+  #send_event('account_status', { series: pie_account_status, color: '#f39c12' })
   send_event('account_level', { series: pie_account_level, color: '#f39c12' })  
 
   ### TOP 10 INSTRUMENTS

@@ -14,7 +14,7 @@ SCHEDULER.every '1h', :blocking => true, :first_in => 0 do
   send_event('iframe_statusboard', { url: 'http://status.homefinder.com' })
 end
 
-SCHEDULER.every '30s', :blocking => true, :first_in => 0 do
+SCHEDULER.every '120s', :blocking => true, :first_in => 0 do
   
   # Establish a connection
   puts "Connecting SugarCRM: sessionSugarSRs ..."

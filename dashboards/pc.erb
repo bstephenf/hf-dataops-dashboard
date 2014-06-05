@@ -1,6 +1,6 @@
 <script type='text/javascript'>
 $(function() {
-Dashing.cycleDashboards({timeInSeconds: 60, stagger: true});
+Dashing.cycleDashboards({timeInSeconds: 120, stagger: true});
 });
 </script>
 
@@ -21,8 +21,51 @@ Dashing.numColumns = 6
 
 <div class="gridster">
 <ul>
+	
     <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
       <div data-id="top_exchanges" data-view="Highbar" data-title="Active: 5,6,7,8" style="background-color:#f48024;"></div>
+    </li>
+
+	<li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+	  <div data-id="casesDataOpsOpenToday" data-view="Hotness" data-title="Cases Opened: DataOps" data-cool="5" data-warm="6"></div>
+	</li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="casesDataOpsClosedToday" data-view="Number" data-title="Cases Closed Today: DataOps" style="background-color:#96bf48;"></div>
+      <!-- <i class="icon-heart icon-background"></i> -->
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="rotationDO" data-view="Text" style="background-color:#3183a6" data-title="" data-text="" data-moreinfo=""></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="4">
+      <div data-id="iframe_statusboard" data-view="Iframe" style="background-color:#333333" data-title="" data-text="Status Board" data-moreinfo=""></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="casesDataOpsClosedTrend" data-view="Highbar" data-title="Cases Closed: Past 5 Days" style="background-color:#f48024;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="recent_trades_list" data-title="Actionable Issues Report" data-view="Fadelist" data-unordered="false" data-moreinfo="" style="background-color:#3498db;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="account_level" data-view="Pie" data-title="Feed Velocity" style="background-color:#f39c12;"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="recent_trades_list" data-title="Jobs: Completed" data-view="Fadelist" data-unordered="false" data-moreinfo="" style="background-color:#3498db;"></div>
+    </li>
+  </ul>
+</div>
+
+<div class="gridster">
+<ul>
+
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+      <div data-id="top_exchanges" data-view="Highbar" data-title="Active: 5a,6a,7a,8a" style="background-color:#f48024;"></div>
     </li>
 
 	<li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
