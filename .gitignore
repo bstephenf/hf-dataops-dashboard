@@ -1,2 +1,14 @@
 
 *.yml
+
+.vagrant/machines/default/virtualbox/id
+
+.vagrant/machines/default/virtualbox/action_provision
+
+.vagrant/machines/default/virtualbox/action_set_name
+
+*.yml
+
+*.yml
+
+history.yml

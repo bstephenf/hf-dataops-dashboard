@@ -23,24 +23,24 @@ SCHEDULER.every '120s', allow_overlapping: false do
   send_event('top_underlying', { series: list2_array, color: '#d35400' })
 
   ### TOP EXCHANGES
-  ex_keys = ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"]
-  ex_data = (1..10).to_a.sample 7
-  ex_data2 = [1, 3, 1, 2, 5, 1]
+  #ex_keys = ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"]
+  #ex_data = (1..10).to_a.sample 7
+  #ex_data2 = [1, 3, 1, 2, 5, 1]
 
-  sorted_exchanges = ex_keys.zip(ex_data).sort_by &:last
-  ex_cats = sorted_exchanges.map { |ex| ex[0] }
-  ex_data = sorted_exchanges.map { |ex| ex[1] }
+  #sorted_exchanges = ex_keys.zip(ex_data).sort_by &:last
+  #ex_cats = sorted_exchanges.map { |ex| ex[0] }
+  #ex_data = sorted_exchanges.map { |ex| ex[1] }
 
-  send_event('top_exchanges', { series: [{ data: ex_data2 }], categories: ex_keys, color: '#efad1b' })
+  #send_event('top_exchanges', { series: [{ data: ex_data2 }], categories: ex_keys, color: '#efad1b' })
 
   ### PPL WHO LIKE PIE
   #pie_series = [{ type: 'pie', name: 'Type', data: [["LOVE", rand(1000)], ["LIKE", rand(1000)], ["HATE", rand(1000)], ["CAKE?", rand(1000)]] }]
   #pie_account_status = [{ type: 'pie', name: 'Type', data: [["Active", rand(1000)], ["Cancel?", rand(100)], ["Alumni", rand(1000)]] }]
-  pie_account_level = [{ type: 'pie', name: 'Type', data: [["Active", rand(100)], ["Passive", rand(100)], ["Unmanaged", rand(1000)]] }]
+  #pie_account_level = [{ type: 'pie', name: 'Type', data: [ ["OfficeCode", 4634], ["AgentCode", 10552], ["PropType", 1207], ["GeoException", 3154] ] }]
 
   #send_event('pie_ppl', { series: pie_series, color: '#f39c12' })
   #send_event('account_status', { series: pie_account_status, color: '#f39c12' })
-  send_event('account_level', { series: pie_account_level, color: '#f39c12' })  
+  #send_event('account_level', { series: pie_account_level, color: '#f39c12' })  
 
   ### TOP 10 INSTRUMENTS
 

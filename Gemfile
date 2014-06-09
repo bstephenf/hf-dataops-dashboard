@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 #ruby '1.9.2'
-ruby '2.1.1'
+ruby '2.1.0'
 
 gem 'dashing', '1.3.4'
 gem 'json', '>= 1.8.1'
