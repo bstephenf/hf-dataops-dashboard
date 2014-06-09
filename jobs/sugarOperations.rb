@@ -2,7 +2,7 @@ require 'sugarcrm'
 require 'json'
 require 'pg'
 
-conn_monitor_gqsjobswaiting = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_monitor_gqsjobswaiting = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '120s', :first_in => 0 do
   countGQSJobsWaiting = 0
   res_monitor_gqsjobswaiting = conn_monitor_gqsjobswaiting.exec("select COUNT(*) as count_gqsjobswaiting from RESALE.PROCESSQUE where PROCSERVER is null")
@@ -16,7 +16,7 @@ SCHEDULER.every '120s', :first_in => 0 do
   send_event('monitorGQSJobsWaiting',   { value: countGQSJobsWaiting })
 end
 
-conn_monitor_propqtotalwaiting = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_monitor_propqtotalwaiting = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '120s', :first_in => 0 do
   countPropQTotalWaiting = 0
   res_monitor_propqtotalwaiting = conn_monitor_propqtotalwaiting.exec("select COUNT(*) as count_propqtotalwaiting from PROP_QUEUE where STATUS_IND = 'W'")
@@ -30,7 +30,7 @@ SCHEDULER.every '120s', :first_in => 0 do
   send_event('monitorPropQTotalWaiting',   { value: countPropQTotalWaiting })
 end
 
-conn_monitor_instagewaiting = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_monitor_instagewaiting = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '120s', :first_in => 0 do
   countInStageWaiting = 0
   res_monitor_instagewaiting = conn_monitor_instagewaiting.exec("select COUNT(*) as count_instagewaiting from INSTG.IN_PROP_QUEUE where STATUS_IND = 'W'")
@@ -44,7 +44,7 @@ SCHEDULER.every '120s', :first_in => 0 do
   send_event('monitorInStageWaiting',   { value: countInStageWaiting })
 end
 
-conn_monitor_imagestotalwaiting = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_monitor_imagestotalwaiting = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '120s', :first_in => 0 do
   countImagesTotalWaiting = 0
   res_monitor_imagestotalwaiting = conn_monitor_imagestotalwaiting.exec("select COUNT(*) as count_imagestotalwaiting from INSTG.CVW_IMAGE_QUEUE where STATUS_IND in ('I','T','P')")
@@ -58,7 +58,7 @@ SCHEDULER.every '120s', :first_in => 0 do
   send_event('monitorImagesTotalWaiting',   { value: countImagesTotalWaiting })
 end
 
-conn_actionableissues = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_actionableissues = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '120s', :first_in => 0 do
 
   #ActionableIssues - begin
@@ -228,7 +228,7 @@ SCHEDULER.every '120s', :first_in => 0 do
   puts "Disconnecting SugarCRM: sessionSugarSRs ..."
 end
 
-conn_dataFeedInventory = PGconn.connect("172.22.193.122", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
+conn_dataFeedInventory = PGconn.connect("hspg3.classifiedventures.com", 5444, '', '', "hsl", "enterprisedb", "enterprisedb")
 SCHEDULER.every '210s', :first_in => 0 do
   #dataFeedInventory - begin
   #BROKERS

@@ -11,18 +11,18 @@ PivotalTracker::Client.token = '8ef302fb547813e8fda79c3aebe54f24'
 SCHEDULER.every '60s', :first_in => 0 do
   puts "Started: Updating Dashboard Tile - Data Ops Projects"
 
-	resource_uri = URI.parse("http://www.pivotaltracker.com/services/v3/projects/875681/stories")
+	resource_uri = URI.parse("http://www.pivotaltracker.com/services/v3/projects/875681/iterations/current_backlog")
 	response = Net::HTTP.start(resource_uri.host, resource_uri.port) do |http|
 		http.get(resource_uri.path, {'X-TrackerToken' => '8ef302fb547813e8fda79c3aebe54f24'})
 	end
 
 	xml = response.body
-	puts xml
+	#puts xml
 	doc = REXML::Document.new(xml)
 	project_list = ''
 
 	i = 0
-	doc.elements.each('stories/story') do |ele|
+	doc.elements.each('iterations/iteration/stories/story') do |ele|
 
 		if ele.elements['current_state'].text == 'started' and i < 6
 			project_list = project_list + '<tr><td align=left>' + ele.elements['name'].text[0..83] + ' ...</td><td align=right>' + ele.elements['owned_by'].text.split[0] + ' ' + ele.elements['owned_by'].text.split[1][0..0] + '.' + '</td><td></tr>'
