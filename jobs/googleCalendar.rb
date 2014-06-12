@@ -3,7 +3,7 @@ require 'google_calendar'
 
 cal_do_rotation = Google::Calendar.new(:username => 'support@homefinder.com', :password => 'hf1suPport', :calendar => 'DataOps Production Rotation')
 
-SCHEDULER.every '12h', :first_in => 0 do
+SCHEDULER.every '1h', :first_in => 0 do
   rotation_dataops = cal_do_rotation.find_events_in_range(Time.now-1, Time.now).title.split[0]
 
   if rotation_dataops == 'Dave'

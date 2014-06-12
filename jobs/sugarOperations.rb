@@ -72,7 +72,7 @@ SCHEDULER.every '120s', :first_in => 0 do
     data_actionableissues_resolvedLabels.push [row['key_field']]
     data_actionableissues_resolvedValues.push [row['count'].to_f]
   end
-  send_event('issuesResolved2', { title: 'Data Issues Resolved: YTD', series: [{ data: data_actionableissues_resolvedValues }], categories: data_actionableissues_resolvedLabels, color: '#efad1b' })
+  send_event('issuesResolved2', { title: 'Actionable Issues Resolved: YTD', series: [{ data: data_actionableissues_resolvedValues }], categories: data_actionableissues_resolvedLabels, color: '#efad1b' })
   puts "Update Tile - issuesResolved2"
   #ActionableIssues - end
 
@@ -239,13 +239,15 @@ SCHEDULER.every '210s', :first_in => 0 do
     order by RUN_DATE desc
     )
     where rownum <= 5')
-  dataFeedInventoryLabels = Array.new 
-  dataFeedInventoryValues = Array.new 
+  dataFeedInventoryLabels = Array.new
+  dataFeedInventoryValues = Array.new
   res_dataFeedInventory.each do |row|
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_brokers'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Brokers', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Brokers', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: brokers"
   sleep 30
 
@@ -263,7 +265,9 @@ SCHEDULER.every '210s', :first_in => 0 do
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_agents'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Agents', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Agents', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: agents"
   sleep 30
 
@@ -281,7 +285,9 @@ SCHEDULER.every '210s', :first_in => 0 do
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_listings'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Listings', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Listings', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: listings"
   sleep 30
 
@@ -299,7 +305,9 @@ SCHEDULER.every '210s', :first_in => 0 do
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_images'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Images', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Images', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: images"
   sleep 30
 
@@ -317,7 +325,9 @@ SCHEDULER.every '210s', :first_in => 0 do
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_openhouses'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Open Houses', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Open Houses', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: openhouses"
   sleep 30
 
@@ -335,7 +345,9 @@ SCHEDULER.every '210s', :first_in => 0 do
     dataFeedInventoryLabels.push [row['run_date']]
     dataFeedInventoryValues.push [row['active_feeds'].to_f]
   end
-  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Feeds', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  send_event('dataFeedInventory', { title: 'Feed Inventory Trend: Number of Active Feeds', series: [{ data: dataFeedInventoryValues }], categories: dataFeedInventoryLabels, color: '#efad1b' })
+  dataFeedInventoryLabels.clear
+  dataFeedInventoryValues.clear
   puts "Update Tile - dataFeedInventory: feeds"
   #dataFeedInventory - end
 end
