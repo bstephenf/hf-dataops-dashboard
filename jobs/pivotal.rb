@@ -25,7 +25,7 @@ SCHEDULER.every '60s', :first_in => 0 do
 	doc.elements.each('iterations/iteration/stories/story') do |ele|
 
 		if ele.elements['current_state'].text == 'started' and i < 6
-			project_list = project_list + '<tr><td align=left>' + ele.elements['name'].text[0..83] + ' ...</td><td align=right>' + ele.elements['owned_by'].text.split[0] + ' ' + ele.elements['owned_by'].text.split[1][0..0] + '.' + '</td><td></tr>'
+			project_list = project_list + '<tr><td align=left>' + ele.elements['name'].text[0..80] + ' ...</td><td align=right>' + ele.elements['owned_by'].text.split[0] + ' ' + ele.elements['owned_by'].text.split[1][0..0] + '.' + '</td><td></tr>'
 			i += 1
 		end
 
